@@ -1,0 +1,26 @@
+# ── Audio Pipeline ──────────────────────────
+sounddevice
+numpy
+scipy
+openwakeword
+faster-whisper
+silero-vad
+av
+
+# ── TTS ─────────────────────────────────────
+piper-tts
+edge-tts
+
+# ── OS & Hardware Control (Windows) ─────────
+pywin32
+psutil
+mss
+comtypes
+pycaw
+opencv-python
+
+# ── HTTP Client ─────────────────────────────
+aiohttp
+
+# ── Environment ─────────────────────────────
+python-dotenv

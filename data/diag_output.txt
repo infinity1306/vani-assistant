@@ -1,0 +1,74 @@
+
+============================================================
+STAGE 1: Audio Buffer (3-second capture test)
+============================================================
+  ✓ Audio chunk received. Shape=(1280,), RMS=7.1
+  ⚠ WARNING: RMS is near-zero (7.1). Mic may be muted or wrong device.
+  Recording 3 seconds of audio...
+  ✓ Captured 44 chunks (3.5s). Overall RMS=56.8
+
+============================================================
+STAGE 2: Wake Word Engine (model load test)
+============================================================
+C:\Users\youri\OneDrive\Desktop\vani\.venv\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.4.3)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+  ✓ Model loaded. Silent chunk detection: False (should be False)
+  ✓ Reset works.
+
+============================================================
+STAGE 3: Speaker Authentication
+============================================================
+2026-06-29 21:46:16,942 - VANI-SpeakerAuth - WARNING - No owner embedding found! VANI will accept ALL voices until enrolled.
+  ✓ Auth result: is_owner=True, score=1.000
+  ℹ No owner embedding enrolled — auth passes all voices.
+
+============================================================
+STAGE 4: Speech-to-Text (Faster Whisper)
+============================================================
+config.json: 0.00B [00:00, ?B/s]config.json: 2.25kB [00:00, 5.91MB/s]
+C:\Users\youri\OneDrive\Desktop\vani\.venv\Lib\site-packages\huggingface_hub\file_download.py:159: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\youri\.cache\huggingface\hub\models--Systran--faster-whisper-tiny. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to see activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+vocabulary.txt: 0.00B [00:00, ?B/s]
+tokenizer.json: 0.00B [00:00, ?B/s][A
+
+model.bin:   0%|          | 0.00/75.5M [00:00<?, ?B/s][A[Avocabulary.txt: 460kB [00:10, 43.1kB/s]vocabulary.txt: 460kB [00:10, 43.1kB/s]
+
+tokenizer.json: 903kB [00:08, 101kB/s][A
+tokenizer.json: 1.83MB [00:22, 78.5kB/s][A
+tokenizer.json: 2.20MB [00:24, 92.3kB/s][Atokenizer.json: 2.20MB [00:24, 89.9kB/s]
+Error while downloading from https://us.aws.cdn.hf.co/xet-bridge-us/655f211ad5c0d3db537f315b/95d706516af777831fff6b2c35837dfb450afca078db361910d44a435b24dc2c?X-Xet-Cas-Uid=public&response-content-type=application%2Foctet-stream&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.bin%3B+filename%3D%22model.bin%22%3B&user_id=public&Expires=1782753381&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5hd3MuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjU1ZjIxMWFkNWMwZDNkYjUzN2YzMTViLzk1ZDcwNjUxNmFmNzc3ODMxZmZmNmIyYzM1ODM3ZGZiNDUwYWZjYTA3OGRiMzYxOTEwZDQ0YTQzNWIyNGRjMmNcXD9YLVhldC1DYXMtVWlkPXB1YmxpYyZyZXNwb25zZS1jb250ZW50LXR5cGU9YXBwbGljYXRpb24lMkZvY3RldC1zdHJlYW0mcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmUlM0IrZmlsZW5hbWUlMkElM0RVVEYtOCUyNyUyN21vZGVsLmJpbiUzQitmaWxlbmFtZSUzRCUyMm1vZGVsLmJpbiUyMiUzQiZ1c2VyX2lkPXB1YmxpYyIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRXBvY2hUaW1lIjoxNzgyNzUzMzgxfX19XX0_&Signature=MEUCIAIiayZiph4CgZciGBTaXfh1Jpitxq5F8fMQwwjNTzU9AiEApeLuqURBoan77z5J0Q9s%7ERm8ZOBtxEPkOZltRm%7EUmNA_&Key-Pair-Id=01KAYHXK2CBJSW0YZTMNXK9W1M: HTTPSConnectionPool(host='us.aws.cdn.hf.co', port=443): Read timed out.
+Trying to resume download...
+2026-06-29 21:49:31,439 - huggingface_hub.file_download - WARNING - Error while downloading from https://us.aws.cdn.hf.co/xet-bridge-us/655f211ad5c0d3db537f315b/95d706516af777831fff6b2c35837dfb450afca078db361910d44a435b24dc2c?X-Xet-Cas-Uid=public&response-content-type=application%2Foctet-stream&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.bin%3B+filename%3D%22model.bin%22%3B&user_id=public&Expires=1782753381&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5hd3MuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjU1ZjIxMWFkNWMwZDNkYjUzN2YzMTViLzk1ZDcwNjUxNmFmNzc3ODMxZmZmNmIyYzM1ODM3ZGZiNDUwYWZjYTA3OGRiMzYxOTEwZDQ0YTQzNWIyNGRjMmNcXD9YLVhldC1DYXMtVWlkPXB1YmxpYyZyZXNwb25zZS1jb250ZW50LXR5cGU9YXBwbGljYXRpb24lMkZvY3RldC1zdHJlYW0mcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmUlM0IrZmlsZW5hbWUlMkElM0RVVEYtOCUyNyUyN21vZGVsLmJpbiUzQitmaWxlbmFtZSUzRCUyMm1vZGVsLmJpbiUyMiUzQiZ1c2VyX2lkPXB1YmxpYyIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRXBvY2hUaW1lIjoxNzgyNzUzMzgxfX19XX0_&Signature=MEUCIAIiayZiph4CgZciGBTaXfh1Jpitxq5F8fMQwwjNTzU9AiEApeLuqURBoan77z5J0Q9s%7ERm8ZOBtxEPkOZltRm%7EUmNA_&Key-Pair-Id=01KAYHXK2CBJSW0YZTMNXK9W1M: HTTPSConnectionPool(host='us.aws.cdn.hf.co', port=443): Read timed out.
+Trying to resume download...
+model.bin:   0%|          | 0.00/75.5M [00:00<?, ?B/s]Error while downloading from https://us.aws.cdn.hf.co/xet-bridge-us/655f211ad5c0d3db537f315b/95d706516af777831fff6b2c35837dfb450afca078db361910d44a435b24dc2c?X-Xet-Cas-Uid=public&response-content-type=application%2Foctet-stream&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.bin%3B+filename%3D%22model.bin%22%3B&user_id=public&Expires=1782753381&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5hd3MuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjU1ZjIxMWFkNWMwZDNkYjUzN2YzMTViLzk1ZDcwNjUxNmFmNzc3ODMxZmZmNmIyYzM1ODM3ZGZiNDUwYWZjYTA3OGRiMzYxOTEwZDQ0YTQzNWIyNGRjMmNcXD9YLVhldC1DYXMtVWlkPXB1YmxpYyZyZXNwb25zZS1jb250ZW50LXR5cGU9YXBwbGljYXRpb24lMkZvY3RldC1zdHJlYW0mcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmUlM0IrZmlsZW5hbWUlMkElM0RVVEYtOCUyNyUyN21vZGVsLmJpbiUzQitmaWxlbmFtZSUzRCUyMm1vZGVsLmJpbiUyMiUzQiZ1c2VyX2lkPXB1YmxpYyIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRXBvY2hUaW1lIjoxNzgyNzUzMzgxfX19XX0_&Signature=MEUCIAIiayZiph4CgZciGBTaXfh1Jpitxq5F8fMQwwjNTzU9AiEApeLuqURBoan77z5J0Q9s%7ERm8ZOBtxEPkOZltRm%7EUmNA_&Key-Pair-Id=01KAYHXK2CBJSW0YZTMNXK9W1M: HTTPSConnectionPool(host='us.aws.cdn.hf.co', port=443): Read timed out.
+Trying to resume download...
+2026-06-29 21:51:16,922 - huggingface_hub.file_download - WARNING - Error while downloading from https://us.aws.cdn.hf.co/xet-bridge-us/655f211ad5c0d3db537f315b/95d706516af777831fff6b2c35837dfb450afca078db361910d44a435b24dc2c?X-Xet-Cas-Uid=public&response-content-type=application%2Foctet-stream&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.bin%3B+filename%3D%22model.bin%22%3B&user_id=public&Expires=1782753381&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5hd3MuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjU1ZjIxMWFkNWMwZDNkYjUzN2YzMTViLzk1ZDcwNjUxNmFmNzc3ODMxZmZmNmIyYzM1ODM3ZGZiNDUwYWZjYTA3OGRiMzYxOTEwZDQ0YTQzNWIyNGRjMmNcXD9YLVhldC1DYXMtVWlkPXB1YmxpYyZyZXNwb25zZS1jb250ZW50LXR5cGU9YXBwbGljYXRpb24lMkZvY3RldC1zdHJlYW0mcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmUlM0IrZmlsZW5hbWUlMkElM0RVVEYtOCUyNyUyN21vZGVsLmJpbiUzQitmaWxlbmFtZSUzRCUyMm1vZGVsLmJpbiUyMiUzQiZ1c2VyX2lkPXB1YmxpYyIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRXBvY2hUaW1lIjoxNzgyNzUzMzgxfX19XX0_&Signature=MEUCIAIiayZiph4CgZciGBTaXfh1Jpitxq5F8fMQwwjNTzU9AiEApeLuqURBoan77z5J0Q9s%7ERm8ZOBtxEPkOZltRm%7EUmNA_&Key-Pair-Id=01KAYHXK2CBJSW0YZTMNXK9W1M: HTTPSConnectionPool(host='us.aws.cdn.hf.co', port=443): Read timed out.
+Trying to resume download...
+model.bin:   0%|          | 0.00/75.5M [01:51<?, ?B/s]
+model.bin:   0%|          | 0.00/75.5M [04:56<?, ?B/s]
+  ✗ EXCEPTION: (MaxRetryError('HTTPSConnectionPool(host=\'us.aws.cdn.hf.co\', port=443): Max retries exceeded with url: /xet-bridge-us/655f211ad5c0d3db537f315b/95d706516af777831fff6b2c35837dfb450afca078db361910d44a435b24dc2c?X-Xet-Cas-Uid=public&response-content-type=application%2Foctet-stream&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.bin%3B+filename%3D%22model.bin%22%3B&user_id=public&Expires=1782753381&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5hd3MuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjU1ZjIxMWFkNWMwZDNkYjUzN2YzMTViLzk1ZDcwNjUxNmFmNzc3ODMxZmZmNmIyYzM1ODM3ZGZiNDUwYWZjYTA3OGRiMzYxOTEwZDQ0YTQzNWIyNGRjMmNcXD9YLVhldC1DYXMtVWlkPXB1YmxpYyZyZXNwb25zZS1jb250ZW50LXR5cGU9YXBwbGljYXRpb24lMkZvY3RldC1zdHJlYW0mcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmUlM0IrZmlsZW5hbWUlMkElM0RVVEYtOCUyNyUyN21vZGVsLmJpbiUzQitmaWxlbmFtZSUzRCUyMm1vZGVsLmJpbiUyMiUzQiZ1c2VyX2lkPXB1YmxpYyIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRXBvY2hUaW1lIjoxNzgyNzUzMzgxfX19XX0_&Signature=MEUCIAIiayZiph4CgZciGBTaXfh1Jpitxq5F8fMQwwjNTzU9AiEApeLuqURBoan77z5J0Q9s~Rm8ZOBtxEPkOZltRm~UmNA_&Key-Pair-Id=01KAYHXK2CBJSW0YZTMNXK9W1M (Caused by NameResolutionError("HTTPSConnection(host=\'us.aws.cdn.hf.co\', port=443): Failed to resolve \'us.aws.cdn.hf.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: f8d6df00-85e4-4693-8d64-6f401cc406bd)')
+
+============================================================
+STAGE 5: TTS Engine (pyttsx3 — 3s timeout test)
+============================================================
+  ✓ TTS works (spoke 'Test' successfully)
+
+============================================================
+STAGE 6: Ollama LLM Connectivity
+============================================================
+  ✓ Ollama API reachable (status 200)
+  ✓ Model 'llama3.1:latest' responded successfully
+
+============================================================
+DIAGNOSTIC SUMMARY
+============================================================
+  ⚠ audio        → LOW_SIGNAL
+  ✓ wakeword     → OK
+  ✓ auth         → OK
+  ✗ stt          → EXCEPTION
+  ✓ tts          → OK
+  ✓ ollama       → OK
+
+  FAILING STAGES: audio, stt
+  Fix these before running main.py

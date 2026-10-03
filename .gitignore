@@ -1,0 +1,17 @@
+﻿.venv/
+env/
+__pycache__/
+*.pyc
+target/
+*.pdb
+*.lib
+*.rlib
+*.ckpt
+*.onnx
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.log
+

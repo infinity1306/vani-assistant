@@ -1,0 +1,126 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Super Admin Panel — Clean Minimalist Design System
+   Apple-inspired. Sharp typography. No glow, no neon.
+   ═══════════════════════════════════════════════════════════════════ */
+
+.sa-root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ─── Cards ───────────────────────────────────────────────────────── */
+.sa-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.sa-card:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* ─── Section Titles ──────────────────────────────────────────────── */
+.sa-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* ─── Inputs ──────────────────────────────────────────────────────── */
+.sa-input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  font-family: inherit;
+}
+
+.sa-input::placeholder {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.sa-input:focus {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.03);
+}
+
+/* Select styling */
+.sa-input option {
+  background: #0a0a0a;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Time input */
+.sa-input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.5);
+}
+
+/* ─── Buttons ─────────────────────────────────────────────────────── */
+.sa-btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.sa-btn-primary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: white;
+}
+
+.sa-btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* ─── Scrollbar ───────────────────────────────────────────────────── */
+.sa-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sa-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sa-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+}
+
+.sa-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ─── Textarea ────────────────────────────────────────────────────── */
+textarea.sa-input {
+  line-height: 1.6;
+  min-height: 80px;
+}
+
+/* ─── Animations ──────────────────────────────────────────────────── */
+@keyframes sa-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

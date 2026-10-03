@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  /* 
+    VANI OS 6.0 
+    Strict Modular Typography (Ratio: 1.25)
+  */
+  --text-xs: 0.64rem;
+  --text-sm: 0.8rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.563rem;
+  --text-2xl: 1.953rem;
+  --text-3xl: 2.441rem;
+  --text-4xl: 3.052rem;
+  --text-5xl: 3.815rem;
+
+  /*
+    Strict 8-point Spatial Grid
+  */
+  --spacing-1: 0.25rem; /* 4px */
+  --spacing-2: 0.5rem;  /* 8px */
+  --spacing-3: 0.75rem; /* 12px */
+  --spacing-4: 1rem;    /* 16px */
+  --spacing-6: 1.5rem;  /* 24px */
+  --spacing-8: 2rem;    /* 32px */
+  --spacing-10: 2.5rem; /* 40px */
+  --spacing-12: 3rem;   /* 48px */
+  --spacing-16: 4rem;   /* 64px */
+  --spacing-20: 5rem;   /* 80px */
+  --spacing-24: 6rem;   /* 96px */
+  --spacing-32: 8rem;   /* 128px */
+
+  /* Colors */
+  --color-vani-background: #050505;
+  --color-vani-panel: rgba(15, 15, 15, 0.95);
+  --color-vani-panel-border: rgba(255, 255, 255, 0.08);
+  --color-vani-text-primary: #ffffff;
+  --color-vani-text-secondary: rgba(255, 255, 255, 0.6);
+  --color-vani-text-muted: rgba(255, 255, 255, 0.3);
+  --color-vani-accent: #e2e2e2;
+  --color-vani-accent-glow: rgba(226, 226, 226, 0.15);
+
+  /* Animation Timings */
+  --animate-micro: 120ms;
+  --animate-button: 180ms;
+  --animate-panel: 350ms;
+  --animate-workspace: 600ms;
+
+  /* Font Families */
+  --font-sans: "Geist Sans", system-ui, sans-serif;
+  --font-mono: "Geist Mono", monospace;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--color-vani-background);
+    color: var(--color-vani-text-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* User selection disabled to feel like a native OS */
+    user-select: none; 
+  }
+
+  /* Typography Base Overrides */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+@layer components {
+  /* Spatial Panel Abstraction */
+  .vani-panel {
+    @apply bg-vani-panel border border-vani-panel-border rounded-xl backdrop-blur-md;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  }
+
+  .vani-glass-none {
+    /* Enforcing non-glassmorphism physical look as requested */
+    backdrop-filter: none;
+    background: #0f0f0f;
+  }
+}
